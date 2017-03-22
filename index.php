@@ -1,7 +1,7 @@
 <?php
 
 // Base URL of the website, without trailing slash.
-$base_url = 'https://orga.cat/notes';
+$base_url = 'http://note.icodeu.com';
 
 // Directory to save user documents.
 $data_directory = '_tmp';
@@ -43,7 +43,7 @@ header('Expires: 0');
 if (empty($_GET['f']) || sanitizeString($_GET['f']) !== $_GET['f']) {
 
     // User has not specified a valid name, generate one.
-    header('Location: ' . $base_url . '/' . generateRandomString());
+    header('Location: ' . $base_url . '/n/' . generateRandomString());
     die();
 }
 
